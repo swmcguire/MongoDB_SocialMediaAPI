@@ -1,0 +1,29 @@
+{
+  "name": "mongodb_socialmediaapi",
+  "version": "1.0.0",
+  "description": "MongoDB Back-end  SocialMedia API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev": "nodemon index",
+    "seed": "node utils/seed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swmcguire/MongoDB_SocialMediaAPI.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/swmcguire/MongoDB_SocialMediaAPI/issues"
+  },
+  "homepage": "https://github.com/swmcguire/MongoDB_SocialMediaAPI#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}

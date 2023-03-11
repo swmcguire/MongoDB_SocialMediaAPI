@@ -1,6 +1,6 @@
 const express = require('express');
 const db = require('./config/connection');
-//------------const routes = require('./routes'); -----------NEED TO CONNECT TO ROUTES FOLDER
+const routes = require('./routes');
 
 //-------const cwd = process.cwd(); ----- I SHOULDN"T NEED THIS --- THIS CONNECTS TO WORKING DIRECTORY
 
@@ -13,7 +13,7 @@ app.use(express.json());
 
 db.once('open', () => {
     app.listen(PORT, () => {
-        console.log(`SocialMedia API server running on port ${PORT}!`)
+        console.log(`SocialMedia API server running at http://localhost:${PORT}`)
     });
 });
 
