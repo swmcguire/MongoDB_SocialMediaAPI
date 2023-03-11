@@ -16,7 +16,7 @@ const thoughtSchema = new Schema(
             type: String, 
             required: true,
         },
-        reactions: [reactionSchema] //---------------- ????  Is this correct?
+        reactions: [reactionSchema] //----------- ????  Is this correct?  Where do we get this from? Virtuals?
 
     },
     {
