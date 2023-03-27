@@ -21,10 +21,15 @@ const thoughtSchema = new Schema(
     },
     {
     toJSON: {
-        getters: true,
+        virtuals: true,
     },
+    id: false,
     }
 );
+
+thoughtSchema.virtual('____ count').get(function () { //---------- 'commentCount' (21 - Virtuals)
+    return this._______.length; //------------ this.comments.length (21 - Virtuals)
+});
 
 const Thought = model('thought', thoughtSchema);
 module.exports = thoughtSchema;
