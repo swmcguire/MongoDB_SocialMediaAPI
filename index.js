@@ -9,7 +9,7 @@ const app = express();
 
 app.use(express.urlencoded({ extend: true }));
 app.use(express.json());
-//---------------app.use(routes); ---------------- DOESN"T EXIST YET
+app.use(routes);
 
 db.once('open', () => {
     app.listen(PORT, () => {
