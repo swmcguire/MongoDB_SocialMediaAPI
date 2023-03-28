@@ -1,5 +1,8 @@
 const  { Schema, model } = require('mongoose');
 
+
+//------------------Though Schema 
+
 const thoughtSchema = new Schema(
     {
         thoughtText: {
@@ -16,7 +19,7 @@ const thoughtSchema = new Schema(
             type: String, 
             required: true,
         },
-        reactions: [reactionSchema] //----------- ????  Is this correct?  Where do we get this from? Virtuals?
+        reactions: [reactionSchema]
 
     },
     {
@@ -27,8 +30,34 @@ const thoughtSchema = new Schema(
     }
 );
 
-thoughtSchema.virtual('____ count').get(function () { //---------- 'commentCount' (21 - Virtuals)
-    return this._______.length; //------------ this.comments.length (21 - Virtuals)
+
+//---------------Reaction Schema
+
+const reactionSchema = new Schema(
+    {
+    reactionId: {
+        type: Schema.Types.ObjectId,
+        default: () => new Types.ObjectId(),
+    },
+    reactionBody: {
+        type: String, 
+        required: true, 
+        maxlength: 280,
+    },
+    username: {
+        type: String,
+        required: true,
+    },
+    createdAt: {
+        type: Date, 
+        default: Date.now,
+    },
+    }
+);
+
+
+thoughtSchema.virtual('reactionCount').get(function () {
+    return this.reactions.length; 
 });
 
 const Thought = model('thought', thoughtSchema);
