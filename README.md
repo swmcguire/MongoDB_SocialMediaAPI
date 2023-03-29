@@ -3,12 +3,13 @@ AS A social media startup I WANT an API for my social network that uses a NoSQL 
 
 ## Description
 
+
+
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+This project is heavily reliant on MongoDB as a backend Database and uses API calls to update the database.  This was a relatively challenging project as there are a lot of small minor details that had to be just right.  For example, when testing, I spelled something incorrectly and had to walk through all of my code again to figure out what went wrong.  I then found out it was my post route, I spelled my column name wrong.
+
+I think this assignment will be very beneficial moving forward.
 
 ## Table of Contents (Optional)
 
@@ -21,23 +22,22 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+You can copy the code from Github, run an npm i which will install Mongoose and express.
+
+Once that is downloaded you can use 'npm run start' to initialize the server and then you can run get/post/update/deletes in insomnia to the thoughts and the users
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+You can copy the code from Github, run an npm i which will install Mongoose and express.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
+Once that is downloaded you can use 'npm run start' to initialize the server and then you can run get/post/update/deletes in insomnia to the thoughts and the users
 
-![alt text](assets/images/screenshot.png)
+![Mongo-Movie](./assets/MongoDemo.webm) <br>
+GitHub Repo:  https://github.com/swmcguire/MongoDB_SocialMediaAPI
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+Wk 18 - Class Assignments - Mini Project
 
 ## License
 
